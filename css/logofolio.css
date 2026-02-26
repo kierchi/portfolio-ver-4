@@ -9,8 +9,8 @@
 /* Font for Logo Project 1 */
 @font-face {
     font-family: 'Roabla';
-    src: url('/fonts/RoablaDemoVersionRegular.woff2') format('woff2'),
-         url('/fonts/RoablaDemoVersionRegular.ttf') format('truetype');
+    src: url('../fonts/RoablaDemoVersionRegular.woff2') format('woff2'),
+         url('../fonts/RoablaDemoVersionRegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -19,8 +19,8 @@
 /* Font for Logo Project 2 */
 @font-face {
     font-family: 'Raleway-Black';
-    src: url('/fonts/Raleway-Black.woff2') format('woff2'),
-         url('/fonts/Raleway-Black.ttf') format('truetype');
+    src: url('../fonts/Raleway-Black.woff2') format('woff2'),
+         url('../fonts/Raleway-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -29,8 +29,8 @@
 /* Font for Logo Project 3 */
 @font-face {
     font-family: 'Footlight-MT';
-    src: url('/fonts/FootlightMTProRegular.woff2') format('woff2'),
-         url('/fonts/FootlightMTProRegular.otf') format('opentype');
+    src: url('../fonts/FootlightMTProRegular.woff2') format('woff2'),
+         url('../fonts/FootlightMTProRegular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
