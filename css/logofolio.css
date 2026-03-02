@@ -312,8 +312,9 @@ a:hover {
    ================================ */
 .color-palette {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 500px;
 }
 
 .color-swatch {
@@ -324,12 +325,12 @@ a:hover {
     width: 100%;
     aspect-ratio: 1;
     border-radius: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .swatch-info {
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .swatch-label {
@@ -340,6 +341,17 @@ a:hover {
 .swatch-value {
     font-family: 'Courier New', monospace;
     color: var(--color-text);
+}
+
+/* Logo Variation Items - Clickable */
+.variation-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.variation-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ================================
@@ -380,7 +392,7 @@ a:hover {
     letter-spacing: 2px;
 }
 
-.font-example-3 {
+.font-example-3, .font-numbers-3 {
     font-family: 'Footlight-MT';
     font-size: 32px;
     margin-bottom: 12px;
@@ -664,8 +676,8 @@ a:hover {
     /* Color Palette - Horizontal */
     .color-palette {
         grid-template-columns: repeat(5, 1fr);
-        gap: var(--gutter);
-        max-width: 900px;
+        gap: 16px;
+        max-width: 700px;
     }
     
     .swatch-color {
@@ -673,7 +685,7 @@ a:hover {
     }
     
     .swatch-info {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     /* Typography */
