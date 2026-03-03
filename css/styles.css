@@ -132,25 +132,9 @@ a:hover {
     background-color: var(--color-accent);
 }
 
-/* Hero Section */
-.hero-section {
-    padding: 60px 0;
-    background-color: var(--color-bg);
-}
-
-.welcome-title {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 50px;
-    color: var(--color-text);
-}
-
-.hero-content {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-}
+/* ================================
+   HERO/INTRO SECTION STYLES - Clean Side Layout
+   ================================ */
 
 /* Hero Section */
 .hero-section {
@@ -276,6 +260,31 @@ a:hover {
     color: #ffffff;
     padding: 30px 25px;
     border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* Add a visual hint that it's interactive */
+.skills-box::before {
+    content: '👆 Click to expand';
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    font-size: 12px;
+    color: var(--color-text);
+    opacity: 0.6;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Hide hint after first interaction */
+.skills-box.expanded::before {
+    display: none;
 }
 
 .skills-grid {
@@ -326,14 +335,17 @@ a:hover {
         position: relative;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 260px; /* Space for polaroids */
-        min-height: 500px;
+        padding: 0 40px;
+        min-height: 600px;
     }
     
     .hero-intro {
-        width: 100%;
+        width: 60%;
+        max-width: 650px;
         padding: 40px 35px;
         margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
     }
     
     .hero-name {
@@ -349,24 +361,12 @@ a:hover {
         line-height: 1.7;
     }
     
-    /* Polaroid - Left Side */
-    .polaroid-link:has(.polaroid-bottom) {
-        position: absolute;
-        bottom: 60px;
-        left: 0;
-    }
-    
-    .polaroid-bottom {
-        width: 220px;
-        transform: rotate(-8deg);
-        margin: 0;
-    }
-    
-    /* Polaroid - Right Side */
+    /* Polaroid - Top Right (overlapping intro) */
     .polaroid-link:has(.polaroid-top) {
         position: absolute;
-        top: 20px;
-        right: 0;
+        top: 80px;
+        right: 40px;
+        z-index: 10;
     }
     
     .polaroid-top {
@@ -375,11 +375,53 @@ a:hover {
         margin: 0;
     }
     
-    /* Skills Box - Below intro */
-    .skills-box {
-        width: 100%;
-        padding: 30px;
+    /* Polaroid - Bottom Right (stacking with top polaroid) */
+    .polaroid-link:has(.polaroid-bottom) {
+        position: absolute;
+        top: 320px;
+        right: 90px;
+        z-index: 11; /* Higher so it's on top */
+    }
+    
+    .polaroid-bottom {
+        width: 200px;
+        transform: rotate(-8deg);
         margin: 0;
+    }
+    
+    /* Skills Box - Below intro, slides from behind */
+    .skills-box {
+        width: 60%;
+        max-width: 650px;
+        padding: 30px;
+        margin-top: -60px; /* Pull it up behind orange box */
+        position: relative;
+        transform: translateY(0);
+        z-index: 0;
+        opacity: 0.9;
+        overflow: hidden;
+        max-height: 80px; /* Show just a peek */
+        transition: all 0.5s ease;
+    }
+    
+    /* Slide DOWN on hover */
+    .skills-box:hover {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 2;
+        max-height: 500px; /* Expand to full height */
+        margin-top: -40px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Stay expanded when clicked */
+    .skills-box.expanded {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 2;
+        max-height: 500px;
+        margin-top: -40px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
     
     .skills-grid {
@@ -404,7 +446,7 @@ a:hover {
     
     .hero-content {
         max-width: 1400px;
-        padding: 0 280px;
+        padding: 0 60px;
     }
     
     .hero-intro {
@@ -425,8 +467,8 @@ a:hover {
     }
     
     .polaroid-link:has(.polaroid-top) {
-        right: 10px;
-        top: 0;
+        right: 80px;
+        top: 60px;
     }
     
     .polaroid-top {
@@ -434,12 +476,12 @@ a:hover {
     }
     
     .polaroid-link:has(.polaroid-bottom) {
-        left: 10px;
-        bottom: 80px;
+        right: 130px;
+        top: 340px;
     }
     
     .polaroid-bottom {
-        width: 240px;
+        width: 220px;
     }
     
     .skills-box {
@@ -460,20 +502,14 @@ a:hover {
 }
 
 @media (min-width: 1400px) {
-    .hero-content {
-        max-width: 1600px;
-        padding: 0 300px;
-    }
-    
     .polaroid-link:has(.polaroid-top) {
-        right: 20px;
+        right: 140px;
     }
     
     .polaroid-link:has(.polaroid-bottom) {
-        left: 20px;
+        right: 190px;
     }
 }
-
 
 /* ================================
    Projects Section

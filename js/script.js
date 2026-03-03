@@ -118,6 +118,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ================================
+    // Skills Box Toggle (Homepage)
+    // ================================
+    const skillsBox = document.querySelector('.skills-box');
+    
+    if (skillsBox) {
+        skillsBox.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+    }
+    
+    // ================================
     // Clickable Items - Lightbox Functionality
     // ================================
     const clickableItems = document.querySelectorAll('.clickable-item, .thumbnail-item');
