@@ -1,0 +1,489 @@
+/* ================================
+   About Page - Redesigned
+   ================================ */
+
+/* Hero Section - Full-width image with overlay */
+.about-hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff; /* White text for visibility */
+    opacity: 1; /* Full opacity */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+}
+
+/* Intro Section */
+.about-intro {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.intro-large {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.about-intro p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.about-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 80px 20px;
+    background-color: #f9f8f6;
+    margin: 60px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--color-text);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    color: var(--color-header-bg);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skill-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.skill-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+/* Tools Section */
+.tools-section {
+    padding: 80px 20px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tool-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-8px);
+}
+
+.tool-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-item:hover .tool-icon {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Adobe Tool Colors */
+.adobe-ai {
+    background: linear-gradient(135deg, #FF9A00 0%, #FF7C00 100%);
+}
+
+.adobe-ps {
+    background: linear-gradient(135deg, #31A8FF 0%, #0078D4 100%);
+}
+
+.adobe-id {
+    background: linear-gradient(135deg, #FF3366 0%, #FF0066 100%);
+}
+
+.adobe-ae {
+    background: linear-gradient(135deg, #9999FF 0%, #6666FF 100%);
+}
+
+.adobe-pr {
+    background: linear-gradient(135deg, #9999FF 0%, #6666CC 100%);
+}
+
+/* Other Tools */
+.csp {
+    background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+}
+
+.procreate {
+    background: linear-gradient(135deg, #917979 0%, #2f3f4a 100%);
+}
+
+.figma {
+    background: linear-gradient(135deg, #F24E1E 0%, #FF7262 100%);
+}
+
+.tool-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* Interests Section */
+.interests-section {
+    padding: 80px 20px;
+    background-color: #f9f8f6;
+    margin: 60px 0;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.interest-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    color: var(--color-header-bg);
+}
+
+.interest-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.interest-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Resume Section */
+.resume-section {
+    text-align: center;
+    padding: 60px 20px;
+    margin: 60px 0;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #E0A151;
+    color: #ffffff;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(168, 69, 79, 0.25);
+    border: none;
+    cursor: pointer;
+}
+
+.resume-btn:hover {
+    background-color: #E0A151;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(168, 69, 79, 0.35);
+}
+
+.resume-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168, 69, 79, 0.25);
+}
+
+.resume-btn svg {
+    flex-shrink: 0;
+}
+
+/* End Message - Already styled in about-styles.css */
+.end-message {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.end-message p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.end-message a {
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--color-link);
+    font-size: 18px;
+}
+
+/* Utility Classes */
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+/* ================================
+   Tablet & Desktop (768px+)
+   ================================ */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+    
+    /* Hero */
+    .hero-image-container {
+        height: 70vh;
+        max-height: 700px;
+    }
+    
+    .hero-text h1 {
+        font-size: 56px;
+        margin-bottom: 16px;
+    }
+    
+    .hero-subtitle {
+        font-size: 24px;
+    }
+    
+    /* Intro */
+    .about-intro {
+        margin: 80px auto;
+    }
+    
+    .intro-large {
+        font-size: 24px;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+    
+    .about-intro p {
+        font-size: 18px;
+        line-height: 1.9;
+    }
+    
+    /* Section Titles */
+    .section-title {
+        font-size: 40px;
+        margin-bottom: 60px;
+    }
+    
+    /* Skills Grid - 3 columns on desktop */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    
+    .skill-item {
+        padding: 40px 30px;
+    }
+    
+    .skill-icon {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 24px;
+    }
+    
+    .skill-item h3 {
+        font-size: 18px;
+    }
+    
+    /* Tools Grid */
+    .tools-grid {
+        gap: 40px;
+    }
+    
+    .tool-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 32px;
+    }
+    
+    .tool-name {
+        font-size: 14px;
+    }
+    
+    /* Interests Grid - 2 columns */
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .interest-item {
+        padding: 30px;
+    }
+    
+    .interest-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .interest-item h3 {
+        font-size: 17px;
+    }
+    
+    /* End Message */
+    .end-message p {
+        font-size: 20px;
+    }
+    
+    .end-message a {
+        font-size: 20px;
+    }
+    
+    /* Resume Button */
+    .resume-section {
+        padding: 80px 20px;
+        margin: 80px 0;
+    }
+    
+    .resume-btn {
+        font-size: 20px;
+        padding: 20px 50px;
+        border-radius: 14px;
+    }
+}
+
+/* ================================
+   Large Desktop (1024px+)
+   ================================ */
+@media (min-width: 1024px) {
+    .hero-image-container {
+        height: 80vh;
+        max-height: 800px;
+    }
+    
+    .skills-section,
+    .tools-section,
+    .interests-section {
+        padding: 100px 20px;
+    }
+}
