@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const links = [
             { text: 'Works', href: 'index.html' },
             { text: 'About', href: 'about.html' },
-            { text: 'Contact', href: 'contact.html' }
+            { text: 'Contact', href: 'contact.html' },
+            { text: 'Resume', href: 'files/KailaWongResume.pdf', target: '_blank' }
         ];
         
         links.forEach(link => {
@@ -47,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const a = document.createElement('a');
             a.textContent = link.text;
             a.href = link.href;
+            if (link.target) {
+                a.target = link.target;
+            }
             a.addEventListener('click', function() {
                 closeMobileMenu();
             });

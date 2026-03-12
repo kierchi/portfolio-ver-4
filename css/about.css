@@ -103,7 +103,7 @@ a:hover {
 }
 
 .nav-desktop a {
-    color: var(--color-text);
+    color: white;
     font-weight: 500;
     position: relative;
 }
@@ -115,7 +115,7 @@ a:hover {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-text);
+    background-color: white;
     transition: width 0.3s ease;
 }
 
@@ -601,5 +601,56 @@ a:hover {
 @media (max-width: 767px) {
     .info-column ul li.desktop-only {
         display: none;
+    }
+}
+
+/* ================================
+   Resume Download Section
+   ================================ */
+.resume-section {
+    text-align: center;
+    padding: 40px 0;
+    margin: 40px 0;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-header-bg);
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(168, 69, 79, 0.2);
+}
+
+.resume-btn:hover {
+    background-color: #E0A151;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168, 69, 79, 0.3);
+}
+
+.resume-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(168, 69, 79, 0.2);
+}
+
+.resume-btn svg {
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .resume-section {
+        padding: 50px 0;
+        margin: 50px 0;
+    }
+    
+    .resume-btn {
+        font-size: 20px;
+        padding: 18px 40px;
     }
 }
