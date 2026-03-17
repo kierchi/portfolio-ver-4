@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaila Wong | Portfolio</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Gabarito:wght@400..900&family=Itim&display=swap" rel="stylesheet">
@@ -14,7 +13,7 @@
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo/KW-PL-BrownGold.svg" alt="Kaila Wong Logo" width="40" height="40">
+                <img src="images/logo/KW-PL-BrownGold.svg" width="40" height="40" alt="KW logo">
             </a>
             <nav class="nav-desktop">
                 <a href="index.html">Works</a>
@@ -31,69 +30,84 @@
     </header>
 
     <main>
-        <!-- Hero/Intro Section -->
+        <!-- Hero/Intro Section with Background Image -->
         <section class="hero-section">
-            <div class="container">
+            <!-- Full-width background image container -->
+            <div class="hero-background">
+                <img src="images/misc/KWBACK.JPG" alt="Background" />
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <!-- Content overlay -->
+            <div class="container hero-container">
                 <h1 class="welcome-title">Welcome Welcome!</h1>
                 
                 <div class="hero-content">
-                    <!-- Orange intro box -->
-                    <div class="hero-intro">
-                        <h2 class="hero-name">Hello, I'm <span class="highlight">Kaila Wong</span></h2>
-                        <p class="hero-subtitle">A <span class="highlight">Graphic Designer</span> from Vancouver!</p>
+                    <!-- Left Polaroid -->
+                    <div class="polaroid polaroid-left">
+                        <img src="images/misc/kw-pol1.jpg" alt="Kaila Wong" />
+                        <p class="polaroid-caption">Wassup</p>
+                    </div>
+                    
+                    <!-- Center Content Column -->
+                    <div class="hero-center">
+                        <!-- Orange intro box -->
+                        <div class="hero-intro">
+                            <h2 class="hero-name">Hello, I'm <span class="highlight">Kaila Wong</span></h2>
+                            <p class="hero-subtitle">A <span class="highlight">Graphic Designer</span> from Vancouver!</p>
+                            
+                            <div class="hero-text">
+                                <p>I originally dreamed of becoming a photographer, then an animator, and somewhere along the way I realized what I was really drawn to was the process of creating — capturing moments, building narratives, and bringing ideas to life visually.</p>
+                                
+                                <p>That curiosity led me to the New Media Design and Web Development program at BCIT, where I developed a strong interest in graphic design and video editing.</p>
+                                
+                                <p>I'm someone who notices the small things like the way layouts guide the eye, how motion adds meaning, how documentation preserves memory.</p>
+                                
+                                <p>Whether it's branding, digital content, or motion graphics, I enjoy crafting work that feels intentional and human.</p>
+                            </div>
+                        </div>
                         
-                        <div class="hero-text">
-                            <p>I originally dreamed of becoming a photographer, then an animator, and somewhere along the way I realized what I was really drawn to was the process of creating — capturing moments, building narratives, and bringing ideas to life visually.</p>
-                            
-                            <p>That curiosity led me to the New Media Design and Web Development program at BCIT, where I developed a strong interest in graphic design and video editing.</p>
-                            
-                            <p>I'm someone who notices the small things like the way layouts guide the eye, how motion adds meaning, how documentation preserves memory.</p>
-                            
-                            <p>Whether it's branding, digital content, or motion graphics, I enjoy crafting work that feels intentional and human.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Skills Box -->
-                    <div class="skills-box">
-                        <div class="skills-grid">
-                            <div class="skills-column">
-                                <h3>What I do:</h3>
-                                <ul>
-                                    <li>Branding & Visual Identity</li>
-                                    <li>Social Media Graphics</li>
-                                    <li>Layout & Print Design</li>
-                                    <li>Video Editing</li>
-                                    <li>Motion Graphics</li>
-                                </ul>
-                            </div>
-                            <div class="skills-column">
-                                <h3>Tools I use:</h3>
-                                <ul>
-                                    <li>Adobe Illustrator</li>
-                                    <li>Adobe Photoshop</li>
-                                    <li>Adobe InDesign</li>
-                                    <li>Adobe Premiere Pro</li>
-                                    <li>Adobe After Effects</li>
-                                    <li>Figma</li>
-                                </ul>
+                        <!-- Blue Skills Box -->
+                        <div class="skills-box">
+                            <div class="skills-grid">
+                                <div class="skills-column">
+                                    <h3>What I do:</h3>
+                                    <ul>
+                                        <li>Branding & Visual Identity</li>
+                                        <li>Social Media Graphics</li>
+                                        <li>Layout & Print Design</li>
+                                        <li>Video Editing</li>
+                                        <li>Motion Graphics</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-column">
+                                    <h3>Tools I use:</h3>
+                                    <ul>
+                                        <li>Adobe Illustrator</li>
+                                        <li>Adobe Photoshop</li>
+                                        <li>Adobe InDesign</li>
+                                        <li>Adobe Premiere Pro</li>
+                                        <li>Adobe After Effects</li>
+                                        <li>Figma</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Polaroids AFTER everything else so they stack on top -->
-                    <a href="about.html" class="polaroid-link">
-                        <div class="polaroid polaroid-top">
-                            <img src="images/misc/kw-pol1.jpg" alt="Kaila Wong" />
-                            <p class="polaroid-caption">Wassup</p>
-                        </div>
-                    </a>
-                    
-                    <a href="about.html" class="polaroid-link">
-                        <div class="polaroid polaroid-bottom">
+                    <!-- Right Polaroids -->
+                    <div class="polaroids-right">
+                        <div class="polaroid polaroid-right-top">
                             <img src="images/misc/kw-pol2.jpg" alt="Kaila Wong" />
-                            <p class="polaroid-caption">Heyyyy</p>
+                            <p class="polaroid-caption">Hi Hi</p>
                         </div>
-                    </a>
+                        
+                        <div class="polaroid polaroid-right-bottom">
+                            <img src="images/misc/nila.jpg" alt="Dog" />
+                            <p class="polaroid-caption">Woof Woof</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -128,30 +142,26 @@
                 <div class="featured-grid">
                     <!-- Neon Veil -->
                     <article class="featured-card">
-                        <a href="neon-veil.html">
+                        <a href="neon-veil.html" style="color: white;">
                             <div class="featured-image">
-                                <a href="neon-veil.html">
-                                    <img src="images/nv/mainbg copy.jpg" alt="Neon Veil - A Music Collective" />
-                                </a>
+                                <img src="images/nv/lightshow-hero.png" alt="Neon Veil - A Music Collective" />
                             </div>
-                            <div class="featured-label" style="background-color: #7ea4ab;">
-                                <h3 style="color: white;">Neon Veil</h3>
-                                <p style="color: white;">A Music Collective</p>
+                            <div class="featured-label" style="background-color: #99B6BB;">
+                                <h3>Neon Veil</h3>
+                                <p>A Music Collective</p>
                             </div>
                         </a>
                     </article>
 
                     <!-- Marianne's Tea -->
                     <article class="featured-card">
-                        <a href="project-detail.html">
+                        <a href="marianne.html" style="color: white;">
                             <div class="featured-image">
-                                <a href="marianne.html">
-                                    <img src="images/mpt/mpt stamp.png" alt="Marianne's Tea - A Tea Company" />
-                                </a>
+                                <img src="images/mpt/mpt stamp.png" alt="Marianne's Tea - A Tea Company" />
                             </div>
                             <div class="featured-label" style="background-color: #263A84;">
-                                <h3 style="color: white;">Marianne's Tea</h3>
-                                <p style="color: white;">A Tea Company</p>
+                                <h3>Marianne's Tea</h3>
+                                <p>A Tea Company</p>
                             </div>
                         </a>
                     </article>
@@ -168,9 +178,7 @@
                     <article class="project-card">
                         <a href="logofolio.html">
                             <div class="project-image">
-                                <a href="logofolio.html">
-                                    <img src="images/logo/KW-PL-BrownGold.svg" alt="Logofolio Showcase" />
-                                </a>
+                                <img src="images/logo/KW-PL-BrownGold.svg" alt="Logofolio Showcase" />
                             </div>
                             <div class="project-label" style="background-color: #e07431;">
                                 <h3>Logofolio</h3>
@@ -183,9 +191,7 @@
                     <article class="project-card">
                         <a href="motion-graphics.html">
                             <div class="project-image">
-                                <a href="motion-graphics.html">
-                                    <img src="images/vid/videoframe_horse.png" alt="Motion Graphics Showcase" />
-                                </a>
+                                <img src="images/vid/videoframe_horse.png" alt="Motion Graphics Showcase" />
                             </div>
                             <div class="project-label" style="background-color: #B0CB37;">
                                 <h3>Motion Graphics</h3>
@@ -199,13 +205,11 @@
                         <a href="misc.html">
                             <div class="project-image">
                                 <div class="placeholder-content">
-                                    <a href="misc.html">
-                                        <img src="images/miscmisc/misc_thumbnail.png" alt="Work In Progress">
-                                    </a>
+                                    <img src="images/miscmisc/miscthumbnail.png" alt="Colourful Scribble" />
                                 </div>
                             </div>
                             <div class="project-label" style="background-color: #E0A151;">
-                                <h3>Misc</h3>
+                                <h3>Miscellaneous</h3>
                                 <p>Random Items</p>
                             </div>
                         </a>
@@ -214,7 +218,7 @@
 
                 <div class="end-message">
                     <p>You've reached the end!</p>
-                    <p>Wanna chat? <a href="contact.html">Go here!</a></p>
+                    <p>Wanna hire me? <a href="contact.html">Go here!</a></p>
                 </div>
             </div>
         </section>
