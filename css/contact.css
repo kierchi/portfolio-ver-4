@@ -175,8 +175,41 @@ a:hover {
     border: 3px solid var(--color-border);
     border-radius: 4px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 115px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    position: relative;
+    /* Airmail stripe accent along the top */
+    border-top: 6px solid transparent;
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            #c0392b 0px, #c0392b 10px,
+            #ffffff 10px, #ffffff 20px,
+            #4259BD 20px, #4259BD 30px,
+            #ffffff 30px, #ffffff 40px
+        ),
+        none;
+    background-size: 40px 6px, auto;
+    background-repeat: repeat-x, no-repeat;
+    background-position: top left, top left;
+    background-clip: padding-box, padding-box;
+    background-color: var(--color-postcard);
 }
+
+/* POST CARD heading on address side */
+.postcard-heading {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(66, 89, 189, 0.55);
+    text-align: center;
+    border-top: 1.5px solid rgba(66, 89, 189, 0.3);
+    border-bottom: 1.5px solid rgba(66, 89, 189, 0.3);
+    padding: 5px 0;
+    margin-bottom: 12px;
+}
+
 
 /* Message Side */
 .postcard-message {
@@ -215,13 +248,13 @@ a:hover {
 /* Address Side */
 .postcard-address {
     position: relative;
-    padding-top: 100px; /* Always make room for the stamp */
+    padding-top: 0;
 }
 
 .postcard-stamp {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     width: 90px;
     height: 90px;
     padding: 5px;
@@ -361,13 +394,28 @@ a:hover {
     border: 3px solid var(--color-border);
     border-radius: 4px;
     padding: 30px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     position: relative;
+    border-top: 6px solid transparent;
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            #c0392b 0px, #c0392b 10px,
+            #ffffff 10px, #ffffff 20px,
+            #4259BD 20px, #4259BD 30px,
+            #ffffff 30px, #ffffff 40px
+        ),
+        none;
+    background-size: 40px 6px, auto;
+    background-repeat: repeat-x, no-repeat;
+    background-position: top left, top left;
+    background-clip: padding-box, padding-box;
+    background-color: var(--color-postcard);
 }
 
 /* Left Side - My Info */
 .info-left {
-    margin-bottom: 120px;
+    margin-bottom: 30px;
 }
 
 .info-title {
@@ -395,13 +443,12 @@ a:hover {
 /* Right Side - Contact Details */
 .info-right {
     position: relative;
-    padding-top: 80px; /* Always make room for the stamp */
 }
 
 .info-stamp {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     width: 90px;
     height: 90px;
     padding: 5px;
@@ -699,6 +746,15 @@ a:hover {
         margin-bottom: 50px;
     }
     
+    /* Card tilts */
+    .info-card {
+        transform: rotate(1deg);
+        transition: transform 0.4s ease;
+    }
+    .info-card:hover {
+        transform: rotate(0deg);
+    }
+
     /* Postcard - Side by Side Layout */
     .postcard-inner {
         display: grid;
@@ -724,16 +780,20 @@ a:hover {
         margin-bottom: 0;
         padding-right: 30px;
     }
+
+    .message-area {
+        padding-right: 15px; /* stamp is on address side on desktop, no need to reserve space */
+    }
     
     .postcard-address {
         padding-left: 30px;
-        padding-top: 120px; /* More space on desktop */
+        padding-top: 115px;
     }
-    
+
     /* Postcard Stamps - Desktop Position */
     .postcard-stamp {
-        top: 0;
-        right: 0;
+        top: 40px;
+        right: 40px;
         width: 100px;
         height: 100px;
     }
@@ -778,12 +838,12 @@ a:hover {
     
     .info-right {
         padding-left: 30px;
-        padding-top: 120px;
+        padding-top: 115px;
     }
-    
+
     .info-stamp {
-        top: 0;
-        right: 0;
+        top: 50px;
+        right: 40px;
         width: 100px;
         height: 100px;
     }

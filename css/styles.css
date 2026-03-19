@@ -308,6 +308,27 @@ a:hover {
     transform: rotate(-2deg) translateY(-5px);
 }
 
+.polaroid-left {
+    transform: rotate(3deg);
+}
+.polaroid-left:hover {
+    transform: rotate(5deg) translateY(-5px);
+}
+
+.polaroid-right-top {
+    transform: rotate(-4deg);
+}
+.polaroid-right-top:hover {
+    transform: rotate(-6deg) translateY(-5px);
+}
+
+.polaroid-right-bottom {
+    transform: rotate(2deg);
+}
+.polaroid-right-bottom:hover {
+    transform: rotate(4deg) translateY(-5px);
+}
+
 .polaroid img {
     width: 100%;
     height: auto;
