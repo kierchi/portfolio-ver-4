@@ -218,6 +218,64 @@ a:hover {
 }
 
 /* ================================
+   Polaroids
+   ================================ */
+.about-polaroids {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px 20px 20px;
+    flex-wrap: wrap;
+}
+
+.polaroid {
+    background-color: #ffffff;
+    padding: 12px;
+    padding-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 160px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.polaroid-caption {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 18px;
+    font-family: 'Crafty Girls', cursive;
+    color: var(--color-text);
+}
+
+.polaroid-left  { transform: rotate(3deg); }
+.polaroid-left:hover  { transform: rotate(5deg) translateY(-5px); }
+
+.polaroid-mid   { transform: rotate(-2deg); margin-top: 20px; }
+.polaroid-mid:hover   { transform: rotate(-4deg) translateY(-5px); }
+
+.polaroid-right { transform: rotate(4deg); }
+.polaroid-right:hover { transform: rotate(6deg) translateY(-5px); }
+
+@media (min-width: 768px) {
+    .about-polaroids {
+        gap: 30px;
+        padding: 60px 20px 10px;
+    }
+
+    .polaroid {
+        width: 200px;
+    }
+}
+
+/* ================================
    Intro Section
    ================================ */
 .about-intro {

@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add links
         const links = [
-            { text: 'Works', href: 'index.html' },
+            { text: 'Works', href: 'works.html' },
             { text: 'About', href: 'about.html' },
             { text: 'Contact', href: 'contact.html' },
             { text: 'Resume', href: 'files/KailaWongResume.pdf', target: '_blank' }

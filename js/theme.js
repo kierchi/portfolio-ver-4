@@ -1,6 +1,6 @@
 (function () {
     var THEMES = ['default', 'gold', 'blue', 'darkblue', 'lime', 'teal', 'orange', 'berry'];
-    var DARK_TEXT_THEMES = ['default', 'lime'];
+    var DARK_TEXT_THEMES = ['default'];
 
     function applyTheme(theme) {
         if (THEMES.indexOf(theme) === -1) theme = 'default';
