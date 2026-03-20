@@ -134,6 +134,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ================================
+    // Polaroid Wiggle on Scroll
+    // ================================
+    var polaroids = document.querySelectorAll('.page-polaroid');
+    if (polaroids.length > 0 && 'IntersectionObserver' in window) {
+        var polaroidObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var pol = entry.target;
+                    pol.classList.add('wiggling');
+                    pol.addEventListener('animationend', function() {
+                        pol.classList.remove('wiggling');
+                    }, { once: true });
+                    polaroidObserver.unobserve(pol);
+                }
+            });
+        }, { threshold: 0.4 });
+        polaroids.forEach(function(pol) {
+            polaroidObserver.observe(pol);
+        });
+    }
+
+    // ================================
     // Skills Box Toggle (Homepage)
     // ================================
     const skillsBox = document.querySelector('.skills-box');
