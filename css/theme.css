@@ -59,17 +59,66 @@ html[data-color-theme="berry"] {
 }
 
 /* ================================
-   Theme Picker UI
+   Theme Picker UI — Compact Dropdown
    ================================ */
+
+/* Trigger button */
 .theme-picker {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    position: relative;
 }
 
+.theme-picker-trigger {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid var(--color-nav-text);
+    color: var(--color-nav-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.theme-picker-trigger:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* Dropdown panel */
+.theme-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 8px 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 200;
+    white-space: nowrap;
+}
+
+/* Show on hover or keyboard focus */
+.theme-picker:hover .theme-dropdown,
+.theme-picker:focus-within .theme-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Swatches inside dropdown */
 .theme-swatch {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 2px solid transparent;
     cursor: pointer;
@@ -83,7 +132,7 @@ html[data-color-theme="berry"] {
 }
 
 .theme-swatch.active {
-    border-color: var(--color-nav-text);
+    border-color: #3E2723;
     transform: scale(1.15);
 }
 
@@ -96,3 +145,13 @@ html[data-color-theme="berry"] {
 .theme-swatch[data-color-theme="teal"]     { background: #7ea4ab; }
 .theme-swatch[data-color-theme="orange"]   { background: #e07431; }
 .theme-swatch[data-color-theme="berry"]    { background: #A8454F; }
+
+/* ================================
+   Nav centering (applied globally via theme.css)
+   ================================ */
+@media (min-width: 768px) {
+    .nav-desktop {
+        flex: 1;
+        justify-content: center;
+    }
+}
