@@ -404,6 +404,23 @@ a:hover {
     font-family: 'AcierBATText-Solid', 'Acier BAT', serif;
 }
 
+.o-slash {
+    position: relative;
+    display: inline-block;
+}
+
+.o-slash::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    width: 116%;
+    height: 0.07em;
+    background: currentColor;
+    transform: translateY(-50%) rotate(-20deg);
+    pointer-events: none;
+}
+
 .type-body {
     font-size: 22px;
     font-weight: 400;
