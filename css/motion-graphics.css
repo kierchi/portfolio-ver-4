@@ -616,6 +616,44 @@ a:hover {
 }
 
 /* ================================
+   Mute Toggle Button
+   ================================ */
+.mute-toggle {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.mute-toggle:hover {
+    background: rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+}
+
+/* show muted icon by default, hide unmuted icon */
+.mute-toggle .icon-muted   { display: block; }
+.mute-toggle .icon-unmuted { display: none;  }
+
+/* when sound is on, swap icons */
+.mute-toggle.is-unmuted .icon-muted   { display: none;  }
+.mute-toggle.is-unmuted .icon-unmuted { display: block; }
+
+/* ================================
    Video Controls Enhancement
    ================================ */
 /* Optional: Add a play/pause overlay for better UX */
