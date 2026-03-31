@@ -298,7 +298,24 @@ a:hover {
 .about-intro {
     max-width: 900px;
     margin: 60px auto;
-    padding: 0 20px;
+    padding: 30px;
+    padding-top: 22px;
+    background-color: var(--color-postcard, #faf8f3);
+    border: 3px solid var(--color-border, #4259BD);
+    border-top: 6px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    background-image: repeating-linear-gradient(
+        90deg,
+        #c0392b 0px, #c0392b 10px,
+        #ffffff 10px, #ffffff 20px,
+        #4259BD 20px, #4259BD 30px,
+        #ffffff 30px, #ffffff 40px
+    );
+    background-size: 40px 6px;
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-clip: padding-box;
 }
 
 .intro-large {
@@ -360,6 +377,17 @@ a:hover {
     background-color: #f9f8f6;
     margin: 60px 0;
     position: relative;
+    border-top: 6px solid transparent;
+    background-image: repeating-linear-gradient(
+        90deg,
+        #c0392b 0px, #c0392b 10px,
+        #ffffff 10px, #ffffff 20px,
+        #4259BD 20px, #4259BD 30px,
+        #ffffff 30px, #ffffff 40px
+    );
+    background-size: 40px 6px;
+    background-repeat: repeat-x;
+    background-position: top left;
 }
 
 .skills-grid {
@@ -373,8 +401,9 @@ a:hover {
 .skill-item {
     text-align: center;
     padding: 30px 20px;
-    background-color: #ffffff;
-    border-radius: 12px;
+    background-color: var(--color-postcard, #faf8f3);
+    border-radius: 4px;
+    border: 1.5px solid rgba(66, 89, 189, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -468,6 +497,17 @@ a:hover {
     background-color: #f9f8f6;
     margin: 60px 0;
     position: relative;
+    border-top: 6px solid transparent;
+    background-image: repeating-linear-gradient(
+        90deg,
+        #c0392b 0px, #c0392b 10px,
+        #ffffff 10px, #ffffff 20px,
+        #4259BD 20px, #4259BD 30px,
+        #ffffff 30px, #ffffff 40px
+    );
+    background-size: 40px 6px;
+    background-repeat: repeat-x;
+    background-position: top left;
 }
 
 .interests-grid {
@@ -483,8 +523,9 @@ a:hover {
     align-items: center;
     gap: 20px;
     padding: 25px;
-    background-color: #ffffff;
-    border-radius: 12px;
+    background-color: var(--color-postcard, #faf8f3);
+    border-radius: 4px;
+    border: 1.5px solid rgba(66, 89, 189, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -743,6 +784,8 @@ a:hover {
     /* Intro */
     .about-intro {
         margin: 80px auto;
+        padding: 40px;
+        padding-top: 22px;
     }
     
     .intro-large {

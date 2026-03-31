@@ -44,6 +44,33 @@
     --color-header-actual: #f5f3f0;
     --color-nav-text: #3E2723;
     --color-header-border: rgba(44, 24, 16, 0.1);
+
+    /* Shared postcard aesthetic */
+    --color-postcard: #faf8f3;
+    --color-border: #4259BD;
+    --color-my-info: #E0A151;
+}
+
+/* ================================
+   Shared Postcard Card
+   ================================ */
+.postcard-card {
+    background-color: var(--color-postcard);
+    border: 3px solid var(--color-border);
+    border-top: 6px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    background-image: repeating-linear-gradient(
+        90deg,
+        #c0392b 0px, #c0392b 10px,
+        #ffffff 10px, #ffffff 20px,
+        #4259BD 20px, #4259BD 30px,
+        #ffffff 30px, #ffffff 40px
+    );
+    background-size: 40px 6px;
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-clip: padding-box;
 }
 
 /* Theme overrides — html[attr] specificity beats :root */

@@ -262,11 +262,26 @@ a:hover {
     gap: 20px;
 }
 
-/* Hero Intro Box */
+/* Hero Intro Box — postcard card */
 .hero-intro {
-    background-color: #E0A151;
+    background-color: var(--color-postcard, #faf8f3);
     padding: 30px;
-    border-radius: 8px;
+    padding-top: 22px;
+    border: 3px solid var(--color-border, #4259BD);
+    border-top: 6px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    background-image: repeating-linear-gradient(
+        90deg,
+        #c0392b 0px, #c0392b 10px,
+        #ffffff 10px, #ffffff 20px,
+        #4259BD 20px, #4259BD 30px,
+        #ffffff 30px, #ffffff 40px
+    );
+    background-size: 40px 6px;
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-clip: padding-box;
 }
 
 .hero-name {
@@ -437,6 +452,17 @@ a:hover {
     text-align: center;
     padding: 60px 0 40px;
     background-color: var(--color-bg);
+    border-top: 6px solid transparent;
+    background-image: repeating-linear-gradient(
+        90deg,
+        #c0392b 0px, #c0392b 10px,
+        #ffffff 10px, #ffffff 20px,
+        #4259BD 20px, #4259BD 30px,
+        #ffffff 30px, #ffffff 40px
+    );
+    background-size: 40px 6px;
+    background-repeat: repeat-x;
+    background-position: top left;
 }
 
 .work-intro h2 {
@@ -486,7 +512,18 @@ a:hover {
    Projects Section
    ================================ */
 .projects-section {
-    padding: 40px 0 60px; /* Back to original */
+    padding: 40px 0 60px;
+    border-top: 6px solid transparent;
+    background-image: repeating-linear-gradient(
+        90deg,
+        #c0392b 0px, #c0392b 10px,
+        #ffffff 10px, #ffffff 20px,
+        #4259BD 20px, #4259BD 30px,
+        #ffffff 30px, #ffffff 40px
+    );
+    background-size: 40px 6px;
+    background-repeat: repeat-x;
+    background-position: top left;
 }
 
 .section-title {
