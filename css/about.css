@@ -283,7 +283,16 @@ a:hover {
         --tilt: -6;
     }
 
+    /* pol-overlap polaroids are absolutely positioned — hide at 1024px
+       where sections aren't wide enough to avoid covering content */
     .page-polaroid.pol-overlap {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page-polaroid.pol-overlap {
+        display: block;
         position: absolute;
         float: none;
         clear: none;
