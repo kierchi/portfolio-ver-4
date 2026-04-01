@@ -5,7 +5,25 @@
 /* ================================
    CUSTOM FONTS - Add your @font-face here
    ================================ */
-   
+
+/* Page Main Font - Playfair Display */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Page Secondary Font - DM Sans */
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Font for Logo Project 1 */
 @font-face {
     font-family: 'Roabla';
@@ -307,6 +325,14 @@ a:hover {
     height: auto;
 }
 
+/* SVG centering fix for project 3 — artboard has uneven whitespace */
+.logo-project-3 .variation-item img {
+    width: auto;
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
 /* ================================
    Color Palette
    ================================ */
@@ -343,15 +369,9 @@ a:hover {
     color: var(--color-text);
 }
 
-/* Logo Variation Items - Clickable */
+/* Logo Variation Items - not clickable */
 .variation-item {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.variation-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: default;
 }
 
 /* ================================
@@ -394,6 +414,20 @@ a:hover {
 
 .font-example-3, .font-numbers-3 {
     font-family: 'Footlight-MT';
+    font-size: 32px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.font-example-playfair {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.font-example-dmsans {
+    font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     margin-bottom: 12px;
     letter-spacing: 2px;
