@@ -471,14 +471,11 @@ a:hover {
 }
 
 .variation-dark .variation-label {
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 .logo-palette {
     margin-top: 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
 }
 
 .logo-palette-label {
@@ -487,20 +484,11 @@ a:hover {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     opacity: 0.5;
-    white-space: nowrap;
+    margin-bottom: 16px;
 }
 
-.logo-palette-swatches {
-    display: flex;
-    gap: 8px;
-}
-
-.logo-swatch {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.1);
-    flex-shrink: 0;
+.logo-color-palette {
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .logo-variations-grid {
@@ -817,6 +805,10 @@ a:hover {
     /* Logo Variations - 2 Columns */
     .logo-variations-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-color-palette {
+        max-width: calc(50% - var(--gutter) / 2);
     }
     
     /* Mockup Grid - 2 Columns */
