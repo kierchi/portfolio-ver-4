@@ -648,6 +648,11 @@ a:hover {
     transform: scale(1.05);
 }
 
+.project-image--contain img {
+    object-fit: contain;
+    padding: 20px;
+}
+
 /* Placeholder Project */
 .project-placeholder .project-image {
     background: linear-gradient(135deg, #e6a66b 0%, #d9985a 100%);
