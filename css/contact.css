@@ -104,17 +104,18 @@
 .message-area {
     width: 100%;
     min-height: 200px;
+    max-height: 500px;
     padding: 15px;
     border: none;
     border-bottom: 2px solid var(--color-border);
     background: repeating-linear-gradient(
         transparent,
-        transparent 39px,
-        var(--color-border) 39px,
-        var(--color-border) 41px
-    );
+        transparent 38px,
+        var(--color-border) 38px,
+        var(--color-border) 40px
+    ) 0 15px / 100% 40px local;
     line-height: 40px;
-    font-family: "Crafty Girls", cursive;
+    font-family: "Gabarito", sans-serif;
     font-size: 16px;
     color: var(--color-text);
     resize: vertical;
@@ -124,10 +125,10 @@
     outline: none;
     background: repeating-linear-gradient(
         transparent,
-        transparent 39px,
-        rgba(74, 95, 140, 0.5) 39px,
-        rgba(74, 95, 140, 0.5) 41px
-    );
+        transparent 38px,
+        rgba(74, 95, 140, 0.5) 38px,
+        rgba(74, 95, 140, 0.5) 40px
+    ) 0 15px / 100% 40px local;
 }
 
 /* Address Side */
@@ -276,26 +277,17 @@
 
 .info-card-inner {
     background-color: var(--color-postcard);
-    border: 3px solid var(--color-border);
-    border-radius: 4px;
+    border: 8px solid;
+    border-image: repeating-linear-gradient(
+        -45deg,
+        #c0392b 0px, #c0392b 6px,
+        #ffffff 6px, #ffffff 12px,
+        #4259bd 12px, #4259bd 18px,
+        #ffffff 18px, #ffffff 24px
+    ) 8;
     padding: 30px 20px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     position: relative;
-    border-top: 6px solid transparent;
-    background-image:
-        repeating-linear-gradient(
-            90deg,
-            #c0392b 0px, #c0392b 10px,
-            #ffffff 10px, #ffffff 20px,
-            #4259BD 20px, #4259BD 30px,
-            #ffffff 30px, #ffffff 40px
-        ),
-        none;
-    background-size: 40px 6px, auto;
-    background-repeat: repeat-x, no-repeat;
-    background-position: top left, top left;
-    background-clip: padding-box, padding-box;
-    background-color: var(--color-postcard);
 }
 
 /* Left Side - My Info */

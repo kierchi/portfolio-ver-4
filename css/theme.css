@@ -224,6 +224,28 @@ html[data-color-theme="berry"] {
 .theme-swatch[data-color-theme="berry"]    { background: #A8454F; }
 
 /* ================================
+   Broken Image Fallback
+   ================================ */
+img {
+    position: relative;
+}
+
+img::after {
+    content: "image couldn't load\A :(";
+    white-space: pre;
+    text-align: center;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-postcard, #faf8f3);
+    color: var(--color-text, #3E2723);
+    font-family: "Gabarito", sans-serif;
+    font-size: 14px;
+}
+
+/* ================================
    Nav centering (applied globally via theme.css)
    ================================ */
 @media (min-width: 768px) {
