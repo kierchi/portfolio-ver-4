@@ -634,7 +634,7 @@
     height: auto;
     aspect-ratio: 9 / 19.5; /* iPhone aspect ratio */
     object-fit: cover;
-    border-radius: 36px; /* App Store style rounded corners */
+    border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
                 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
@@ -672,7 +672,7 @@
     }
 
     .phone-mockup img {
-        border-radius: 28px;
+        border-radius: 12px;
     }
 }
 
